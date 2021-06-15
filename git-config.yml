@@ -1,4 +1,7 @@
+
 steps:
+- name: Setup Java JDK
+  uses: actions/setup-java@v2.1.0
 - uses: actions/checkout@v2
 - uses: actions/setup-java@v2
   with:
@@ -6,3 +9,5 @@ steps:
     java-version: '11'
     check-latest: true
 - run: java -cp java TestBot
+
+
