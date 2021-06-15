@@ -1,4 +1,8 @@
 steps:
-  - name: Hello world action
-    env: # Or as an environment variable
-      token: ${{ secrets.BOT_TOKEN }}
+- uses: actions/checkout@v2
+- uses: actions/setup-java@v2
+  with:
+    distribution: 'adopt'
+    java-version: '11'
+    check-latest: true
+- run: java -cp java TestBot
