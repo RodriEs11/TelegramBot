@@ -1,0 +1,4 @@
+steps:
+  - name: Hello world action
+    env: # Or as an environment variable
+      token: ${{ secrets.BOT_TOKEN }}
